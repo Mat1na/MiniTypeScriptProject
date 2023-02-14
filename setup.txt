@@ -1,0 +1,47 @@
+** tsc --init
+** mkdir src dist
+** touch src/index.ts
+
+** "outDir": "./dist"
+
+** "include": ["src"]
+
+**tsc -w
+
+** to run node dist/index.js
+** for the browser make HTML file
+
+** npm init -y
+
+**  "scripts": {
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js"
+  },
+
+** right click to the document element to open type definition if to want to disable the  lib.dom for exaple if you work in the backend you go to the "lib" in tsconfig and uncomment
+
+
+**document //var document: Document ts knows
+
+ const btn=document.getElementById("btn")! //const btn: HTMLElement | null and not a button
+
+ btn?.addEventListener("click",()=>{  //gives error'btn' is possibly 'null' add ? to avoid
+    alert("clicked")
+ })
+
+
+** ! not null assertion operator
+
+const btn=document.getElementById("btn")! //add ! to say it's not null if we are sure that the id exists
+
+btn.addEventListener("click",()=>{  
+    alert("clicked")
+})
+
+********  Type Assertions
+
+** Just to tell Ts i know more than you 
+
+ let mystery:unknown="Hello world" // we add type unknown just to imitate an unknown type
+
+const numChars=(mystery as string).length //cannot access length 'mystery' is of type 'unknown' so we as and the type we want to be treated as

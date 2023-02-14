@@ -1,0 +1,21 @@
+{
+  "name": "minitypescriptproject",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "dev": "nodemon dist/index.js",
+    "start": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Mat1na/MiniTypeScriptProject.git"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Mat1na/MiniTypeScriptProject/issues"
+  },
+  "homepage": "https://github.com/Mat1na/MiniTypeScriptProject#readme"
+}
